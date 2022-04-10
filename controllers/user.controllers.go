@@ -28,7 +28,7 @@ func (uc UserController) CreateUser(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"message": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"message": "User added successfully"})
+	c.JSON(http.StatusCreated, gin.H{"message": "User added successfully"})
 }
 
 func (uc UserController) GetUser(c *gin.Context) {
